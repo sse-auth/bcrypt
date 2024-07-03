@@ -1,4 +1,3 @@
-
 const BCRYPT_SALT_LEN = 16;
 const GENSALT_DEFAULT_LOG2_ROUNDS = 10;
 const BLOWFISH_NUM_ROUNDS = 16;
@@ -386,7 +385,7 @@ function _ekskey(data: any, key: any, P: any, S: any) {
         S[i + 1] = lr[1];
 }
 
-function _crypt(b: any, salt: any, rounds: any, callback: any | undefined, progressCallback: any) {
+function _crypt(b: any, salt: any, rounds: any, callback: any, progressCallback: any) {
     const cdata = C_ORIG.slice();
     const clen = cdata.length;
     let err: Error;
@@ -558,7 +557,7 @@ function _hash(s: string, salt: string | undefined, callback: { (err: Error | nu
      * @returns {string}
      * @inner
      */
-    function finish(bytes: number[] | undefined) {
+    function finish(bytes: number[]) {
         const res = [];
         res.push("$2");
         if (minor >= 'a') {

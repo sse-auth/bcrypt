@@ -144,3 +144,5 @@ var accum = (function () {
     fetch: fetch,
   };
 })();
+
+export { accum as AccumulatorModule }

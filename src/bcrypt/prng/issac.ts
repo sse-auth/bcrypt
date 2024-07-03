@@ -1,4 +1,4 @@
-import { AccumulatorModule } from './accumulator'; // Assuming the accumulator module is in a separate file
+import { AccumulatorModule } from './accum'; // Assuming the accumulator module is in a separate file
 
 /* isaac module pattern */
 const isaac = (() => {

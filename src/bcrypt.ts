@@ -1,7 +1,5 @@
-
 import { randomBytes } from 'crypto';
 
-let GENSALT_DEFAULT_LOG2_ROUNDS: any
 
 declare namespace bcrypt {
   export function setRandomFallback(random: (len: number) => number[]): void;
